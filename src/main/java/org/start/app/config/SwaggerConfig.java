@@ -20,13 +20,17 @@ public class SwaggerConfig {
         localServer.setUrl("http://localhost:8080");
         localServer.setDescription("本地环境");
 
-        Server testServer = new Server();
-        testServer.setUrl("http://47.97.211.226:8080/");
-        testServer.setDescription("测试环境");
+        Server aliServer = new Server();
+        aliServer.setUrl("http://47.97.211.226:8080/");
+        aliServer.setDescription("ali环境");
+
+        Server tengServer = new Server();
+        tengServer.setUrl("http://124.221.19.177:8080/");
+        tengServer.setDescription("teng环境");
 
         List<Server> servers = new ArrayList<>();
         servers.add(localServer);
-        servers.add(testServer);
+        servers.add(aliServer);
 
         return new OpenAPI()
                 .info(new Info()

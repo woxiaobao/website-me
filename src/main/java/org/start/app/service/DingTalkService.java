@@ -52,7 +52,7 @@ public class DingTalkService {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
             HttpEntity<String> request = new HttpEntity<>(JSON.toJSONString(message), headers);
-            
+
             restTemplate.postForObject(url, request, String.class);
             return true;
         } catch (Exception e) {
