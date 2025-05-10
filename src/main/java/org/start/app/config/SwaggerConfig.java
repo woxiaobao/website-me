@@ -31,6 +31,7 @@ public class SwaggerConfig {
         List<Server> servers = new ArrayList<>();
         servers.add(localServer);
         servers.add(aliServer);
+        servers.add(tengServer);
 
         return new OpenAPI()
                 .info(new Info()
